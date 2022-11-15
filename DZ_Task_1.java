@@ -34,16 +34,16 @@ public class DZ_Task_1 {
         int min = Math.min(a1.length, a2.length);
         int max = Math.max(a1.length, a2.length);
         if (min < 1) {
-            throw new RuntimeException("один из массивов пуст");
+            throw new RuntimeException("one of the arrays is empty");
         }
         if (min < max) {
-            throw new RuntimeException("Длинны массивов не равны!");
+            throw new RuntimeException("The lengths of the arrays are not equal!");
         }
         for (int i = 0; i < min; i++) {
             if (a2[i] != 0) {
                 res.add((float) (a1[i] / a2[i]));
             } else {
-                throw new RuntimeException("Деление на ноль");
+                throw new RuntimeException("Division by zero");
             }
         }
         return res;
